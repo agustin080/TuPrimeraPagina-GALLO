@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+<form action='/ventas/carga_suplemento' method="post">
+    {% csrf_token %}
+    <p> Nombre del suplemento: <input type = "text" name="nombre">
+    <p> Longitud: <input type = "number" name="longitud">
+    <p> Ancho: <input type = "number" name="ancho">
+    <p> Altura: <input type = "number" name="altura">
+    <p> Peso: <input type = "number" name="peso">    
+    <br>
+    <input type = "submit" value="Enviar">
+ </form>
+
+
+{% endblock %}
